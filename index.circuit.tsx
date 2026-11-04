@@ -133,7 +133,10 @@ export default () => (
     {/* ================================================================ */}
     {/* ESP32-S3-MINI-1-N8                                               */}
     {/* ================================================================ */}
-    <ESP32_S3_MINI_1_N8 name="U_ESP" pcbX={-10} pcbY={-18} />
+    <ESP32_S3_MINI_1_N8 name="U_ESP" 
+      // pcbRotation="180deg"
+      pcbX={-10} 
+      pcbY={-18} />
 
     <capacitor
       name="C_ESP_BULK"
@@ -175,8 +178,8 @@ export default () => (
       pcbX={0}
       pcbY={-20}
     />
-    <TS_1187A_B_A_B name="SW_RESET" pcbX={-10} pcbY={-31} />
-    <TS_1187A_B_A_B name="SW_BOOT" pcbX={-2} pcbY={-31} />
+    <TS_1187A_B_A_B name="SW_RESET" pcbX={-12} pcbY={-31} />
+    <TS_1187A_B_A_B name="SW_BOOT" pcbX={2} pcbY={-31} />
 
     {/* ================================================================ */}
     {/* USB-C #2 - KEYBOARD HOST (source, 22k Rp on CC)                  */}
@@ -207,7 +210,7 @@ export default () => (
     {/* ================================================================ */}
     {/* microSD - TF-01A on SPI                                          */}
     {/* ================================================================ */}
-    <TF_01A name="J_SD" pcbX={26} pcbY={-19} />
+    <TF_01A name="J_SD" pcbX={26} pcbY={-30} />
     <resistor
       name="R_SD_CD"
       resistance="10k"
@@ -228,7 +231,9 @@ export default () => (
     {/* ================================================================ */}
     {/* 16x2 CHARACTER LCD - HS1602A-B, 4-bit parallel                   */}
     {/* ================================================================ */}
-    <HS1602A_B name="U_LCD" pcbX={0} pcbY={20} />
+    <HS1602A_B name="U_LCD"
+        layer="bottom"
+    pcbX={0} pcbY={20} />
     <resistor
       name="R_V0_TOP"
       resistance="100k"
